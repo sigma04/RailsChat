@@ -1,0 +1,46 @@
+<head>
+<style>
+body
+{
+	margin-left:auto;
+	background:#5d9ab2;
+}
+
+.container
+{
+	text-align:center;
+}
+
+.center_div
+{
+	border:1px solid gray;
+	margin-left:auto;
+	margin-right:auto;
+	width:90%;
+	background-color:#d0f0f6;
+	text-align:left;
+	padding:8px;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+<div class="center_div">
+
+<h1>
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+
+<h3>sex:  <%= @user.sex %></h3>
+<h3>email:  <%= @user.email %></h3>
+<h3>phonenumber:  <%= @user.phonenumber %></h3>
+<h3>status:  <%= @user.status %></h3>
+
+</div>
+</div>
+</body>
+
+
+

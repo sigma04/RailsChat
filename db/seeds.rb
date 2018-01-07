@@ -7,17 +7,36 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 # test by zhangfei and peng
 
-(1..100).each do |index|
-  User.create(
-      name: "user#{index}",
-      email: "user#{index}@test.com",
+User.create(
+      name: "user1",
+      email: "user1@test.com",
       password: 'password',
       role: Faker::Number.between(1, 4),
       sex: ['male', 'female'].sample,
       phonenumber: Faker::PhoneNumber.phone_number,
       status: Faker::Company.profession
-  )
-end
+)
+
+
+User.create(
+      name: "sigma4",
+      email: "gtwangw@163.com",
+      password: 'password',
+      role: Faker::Number.between(1, 4),
+      sex: ['male', 'female'].sample,
+      phonenumber: Faker::PhoneNumber.phone_number,
+      status: Faker::Company.profession
+)
+
+User.create(
+      name: "Knight",
+      email: "example@railstutorial.org",
+      password: 'password',
+      role: Faker::Number.between(1, 4),
+      sex: ['male', 'female'].sample,
+      phonenumber: Faker::PhoneNumber.phone_number,
+      status: Faker::Company.profession
+)
 
 User.first.friendships.create(:friend_id => 2)
 User.first.friendships.create(:friend_id => 3)

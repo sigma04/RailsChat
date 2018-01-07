@@ -1,6 +1,7 @@
 <li class="mar-btm">
   <div class="media-<%= current_user.id==message.user.id ? 'right' : 'left' %>">
-    <%= image_tag "user-icon.png", class: "img-sm" %>
+    <%= gravatar_for message.user %>
+    <!--<%= image_tag "user-icon.png", class: "img-sm" %>-->
   </div>
   <div class="media-body pad-hor <%= "speech-right" if current_user.id==message.user.id %>">
     <div class="speech">

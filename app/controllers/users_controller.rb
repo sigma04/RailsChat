@@ -64,9 +64,9 @@ class UsersController < ApplicationController
   end
 
   def correct_user
-    unless current_user == @user or current_user.role == 5
-      redirect_to user_path(current_user), flash: {:danger => '您没有权限浏览他人信息'}
-    end
+#    unless current_user == @user or current_user.role == 5
+#      redirect_to user_path(current_user), flash: {:danger => '您没有权限浏览他人信息'}
+#    end
   end
 
   def set_user
